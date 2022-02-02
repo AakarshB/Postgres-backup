@@ -18,7 +18,7 @@ spec:
           value: "adventureworks"
         - name: PGSOURCEUSER
           value: "Azureadmin@cronjobtest"
-        - name: $PGSOURCEPASSWORD
+        - name: PGSOURCEPASSWORD
           value: "P3CGULlUzA"
         - name: fileShareName
           value: "backup2"
