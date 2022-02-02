@@ -1,3 +1,5 @@
+![Postgresql-backup-restore-architecture](https://user-images.githubusercontent.com/85996087/152222511-8f3946a8-8a5a-4020-9f2c-c8a32a9c7fa1.jpg)
+
 ## Goal
 
 Easily backup your PostgreSQL Database to Azure storage Account
