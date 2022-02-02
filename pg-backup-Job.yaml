@@ -8,7 +8,7 @@ spec:
       restartPolicy: OnFailure
       containers:
       - name: pgsql-backup
-        image: aakarsh94/postgres-dump:v1
+        image: aakarsh94/postgres-backup:v1
         env:
         - name: PGSOURCEHOST
           value: "cronjobtest.postgres.database.azure.com"
