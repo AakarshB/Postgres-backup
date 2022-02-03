@@ -7,8 +7,7 @@ Intended to be used with Kubernetes for creating Jobs that can back up your post
 
 ## Prerequisities to gather
 
-![image](https://user-images.githubusercontent.com/85996087/152320313-28c983b5-c8c5-4a9c-ae77-60370887d3c4.png)
-
+![image](https://user-images.githubusercontent.com/85996087/152321263-216e41b6-f8cc-4ff2-8d51-573bcfa343d0.png)
 
 ## Running the Backup Job in the Source Kubernetes cluster
 
