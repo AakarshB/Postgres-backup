@@ -15,20 +15,16 @@ Intended to be used with Kubernetes for creating Jobs that can back up your post
 
 Create a storage account with a fileshare
 
-### Step 2. Replace your Database creds.
+### Step 2. Replace your Database and azure storage account creds.
 
-Replace database creds in [pg-backup-Job.yaml]
+Replace database creds in [pg-backup-Job.yaml] and [secret.yaml]
 
-### Step 3. Update the secret.yaml and pg-backup-job.yaml
-
-Update the secret.yaml and pg-backup-job.yaml with the DB and storage connectionstrings
-
-### Step 1. Replace the image name with the version specific to your PostgreSQL server.
+### Step 3. Replace the image name with the version specific to your PostgreSQL server.
 
 Below is an example of the image name which is specific to PostgreSQL version 11
 
 aakarsh94/postgresql-backup:v11 `
 
-### Step 5. Run the job
+### Step 4. Run the job
 
 Apply the job and secrets.yaml in your kubernetes cluster
