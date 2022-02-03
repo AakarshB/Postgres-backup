@@ -1,31 +1,35 @@
-![Postgresql-backup-restore-architecture](https://user-images.githubusercontent.com/85996087/152222511-8f3946a8-8a5a-4020-9f2c-c8a32a9c7fa1.jpg)
-
 ## Goal
-
-Easily backup your PostgreSQL Database to Azure storage Account
+Easily backup your PostgreSQL Database to Azure storage Account Using a kubernetes job.
 
 Intended to be used with Kubernetes for creating Jobs that can back up your postgresql database.
 
-## Running the Backup Job in Kubernetes cluster
+![Postgresql-backup-restore-architecture](https://user-images.githubusercontent.com/85996087/152222511-8f3946a8-8a5a-4020-9f2c-c8a32a9c7fa1.jpg)
 
-### Step 1. Create a storage account 
+## Prerequisities to gather
+
+![image](https://user-images.githubusercontent.com/85996087/152320313-28c983b5-c8c5-4a9c-ae77-60370887d3c4.png)
+
+
+## Running the Backup Job in the Source Kubernetes cluster
+
+### Step 1. Create an Azure storage account 
 
 Create a storage account with a fileshare
 
 ### Step 2. Replace your Database creds.
+
 Replace database creds in [pg-backup-Job.yaml]
 
-### Step 3. Update the secret.yaml and job.yaml with the DB and storage connectionstrings
+### Step 3. Update the secret.yaml and pg-backup-job.yaml
 
-Update the secret.yaml and cronjob.yaml with the DB and storage connectionstrings
+Update the secret.yaml and pg-backup-job.yaml with the DB and storage connectionstrings
 
-### Step 4. Replace the image name with the lastest image provided.
+### Step 1. Replace the image name with the version specific to your PostgreSQL server.
 
-Below is the defualt provided in the cronjob yaml
+Below is an example of the image name which is specific to PostgreSQL version 11
 
-"aakarsh94/postgres-backup:v1"
+aakarsh94/postgresql-backup:v11 `
 
 ### Step 5. Run the job
 
- Apply the job and secrets.yaml in your kubernetes cluster
-
+Apply the job and secrets.yaml in your kubernetes cluster
